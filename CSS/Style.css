@@ -1,0 +1,34 @@
+/* Quitar estilos por defecto */
+
+body{
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  display: flex; /* Menú horizontal */
+  justify-content: center; /* Centrar elementos */
+  background-color: white; /* Fondo */
+  border-top: 3px solid green; /* Línea superior */
+    border-bottom: 1px solid #ccc;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+  color:#418828; /* Color de texto */
+    font-weight: bold;
+    
+}
+
+nav a:hover {
+  background-color: #f0f0f0; /* Fondo al pasar */
+  color: darkgreen; /* Texto más fuerte */
+}
