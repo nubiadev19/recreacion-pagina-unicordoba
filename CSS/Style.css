@@ -1,8 +1,11 @@
 /* Quitar margen por defecto del body */
 body{
     margin: 0;
+    font-size: 5px;
 }
-
+a{
+    
+}
 /* Barra de navegación principal */
 nav ul {
     list-style: none;              /* Quita los puntos de la lista */
@@ -85,19 +88,3 @@ nav a:hover {
     color: white;                     /* Ícono blanco al pasar el mouse */
 }
 
-/* Responsive: reduce tamaño en pantallas pequeñas */
-@media (max-width: 900px) {
-    nav li {
-        max-width: 120px;      /* Menor que en escritorio pero legible */
-        min-width: 80px;
-        height: 50px;
-    }
-    nav a {
-        font-size: 15px;       /* Texto más pequeño pero visible */
-    }
-    .social-icons a {
-        width: 30px;
-        height: 30px;
-        font-size: 16px;
-    }
-}
