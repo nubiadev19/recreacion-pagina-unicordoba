@@ -50,5 +50,60 @@
             </ul>
         </nav>
     </header>
+
+<!-- ...existing code arriba... -->
+<main class="contenedor-principal">
+    <section class="grid-eventos">
+        <article class="card-evento">
+            <div class="carrusel">
+                <div class="slides">
+                    <img src="../IMG/carrusel1-1.png" alt="imagen 1" class="active">
+                    <img src="../IMG/carrusel1-2.png" alt="imagen 2">
+                    <img src="../IMG/carrusel1-3.png" alt="imagen 3">
+                    <img src="../IMG/carrusel1-4.png" alt="imagen 4">
+                </div>
+                <!-- flechitas pa cambiar de imagen -->
+                <button class="prev">&#10094;</button>
+                <button class="next">&#10095;</button>
+            </div>
+        </article>
+    </section>
+</main>
+
+<!-- carrusel script, pa que cambie las imagenes solito -->
+<script>
+    // selecciona las imagenes y los botones
+    const slides = document.querySelectorAll('.slides img');
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+    let current = 0;
+
+    // funcion pa mostrar la imagen actual
+    function showSlide(idx) {
+        slides.forEach((img, i) => {
+            img.classList.toggle('active', i === idx);
+        });
+    }
+
+    // pa ir pa atras
+    prevBtn.addEventListener('click', () => {
+        current = (current - 1 + slides.length) % slides.length;
+        showSlide(current);
+    });
+
+    // pa ir pa delante
+    nextBtn.addEventListener('click', () => {
+        current = (current + 1) % slides.length;
+        showSlide(current);
+    });
+
+    // pa que cambie solo cada 4 segundos
+    setInterval(() => {
+        current = (current + 1) % slides.length;
+        showSlide(current);
+    }, 4000);
+</script>
+
+
 </body>
 </html>
