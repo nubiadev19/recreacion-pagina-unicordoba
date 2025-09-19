@@ -1,0 +1,83 @@
+/* bloque principal del footer */
+.footer {
+    position: relative; /* permite colocar la capa de fondo */
+    background: #fff; /* color blanco de base */
+    margin-top: 40px; /* espacio hacia arriba */
+    font-family: 'open sans', arial, sans-serif; /* tipografia */
+    color: #222; /* color de texto */
+    border-top: 1px solid #e0e0e0; /* linea gris superior */
+    overflow: hidden; /* oculta lo que sobresalga */
+}
+
+/* capa de fondo con la imagen */
+.footer-bg {
+    position: absolute; /* detras del contenido */
+    top: 0; right: 0; bottom: 0; left: 0; /* cubre todo el footer */
+    background: url('../IMG/fondoFooter.png') no-repeat right center; /* ruta de la imagen */
+    background-size: 60% auto; /* tamaño relativo */
+    opacity: 0.12; /* transparencia */
+    z-index: 0; /* se queda debajo */
+}
+
+/* contenedor de columnas */
+.footer-columns {
+    display: grid; /* activa grid */
+    grid-template-columns: repeat(6, 1fr); /* 6 columnas iguales */
+    gap: 30px; /* espacio entre columnas */
+    max-width: 1400px; /* limite maximo de ancho */
+    margin: 0 auto; /* centra el bloque */
+    padding: 40px 30px 20px 30px; /* espaciado interno */
+    position: relative; /* asegura que quede sobre la capa de fondo */
+    z-index: 1; /* sobre la imagen */
+}
+
+
+/* cada columna individual */
+.footer-columns > div {
+    font-size: 15px; /* tamaño de letra */
+    line-height: 1.6; /* interlineado */
+    color: #222; /* color de texto */
+}
+
+/* titulos en negrita */
+.footer-columns strong {
+    font-weight: bold; /* negrita */
+    color: #222; /* mismo color */
+}
+
+/* bloque de informacion institucional */
+.footer-info {
+    text-align: center; /* centrado */
+    font-size: 14px; /* tamaño texto */
+    color: #444; /* gris oscuro */
+    margin: 10px 0 0 0; /* margen arriba */
+    position: relative; /* mantiene el nivel */
+    z-index: 1; /* sobre la imagen */
+}
+
+/* bloque de informacion legal */
+.footer-legal {
+    text-align: center; /* centrado */
+    font-size: 13px; /* texto mas pequeño */
+    color: #444; /* gris oscuro */
+    margin: 8px 0 0 0; /* margen arriba */
+    position: relative; /* mantiene el flujo */
+    z-index: 1; /* sobre la imagen */
+}
+
+/* version responsive */
+@media (max-width: 900px) {
+    .footer-columns {
+        grid-template-columns: 1fr; /* cambia a una columna */
+        gap: 10px; /* espacio reducido */
+        padding: 20px 10px 10px 10px; /* menos padding */
+    }
+    .footer-columns > div {
+        font-size: 14px; /* reduce fuente */
+    }
+    .footer-info,
+    .footer-legal {
+        font-size: 12px; /* texto mas pequeño */
+        padding: 0 5px; /* espacio lateral */
+    }
+}
