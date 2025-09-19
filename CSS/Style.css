@@ -4,54 +4,21 @@ body{
     font-size: 16px; /* tamaño base pa todo el texto */
 }
 
-
-/* Carrusel grande pa que se vea igualito al de la imagen */
 .carrusel {
-    width: 1000vw; /* ocupa todo el ancho de la ventana */
-    max-width: 100vw;
-    height: 1000px; /* el alto real de tus imagenes */
+    width: 100vw;
+    height: 550px; /* más alto */
     position: relative;
     overflow: hidden;
-    margin: 0;
     background: #fff;
-    border-radius: 0;
-    padding: 0;
+    margin-top: 15px;
 }
 
-/* pa que las imagenes se ajusten y se vean completas */
 .carrusel img {
     width: 100vw;
     height: 100%;
-    object-fit: contain; /* muestra toda la imagen sin recortar */
-    display: none;
+    object-fit: cover;
+    display: block;
     position: absolute;
     top: 0;
     left: 0;
-    transition: opacity 0.5s ease;
-    background: #fff; /* fondo blanco pa que no se vea feo si sobran espacios */
 }
-
-/* solo la imagen activa se ve */
-.carrusel .slides img.active {
-    display: block;
-    opacity: 1;
-}
-
-/* flechitas pa cambiar de imagen */
-.carrusel .prev,
-.carrusel .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(253, 253, 253, 0); /* verde transparente */
-    color: #fff6f6;
-    border: none;
-    font-size: 2rem;
-    padding: 8px 16px;
-    cursor: pointer;
-    border-radius: 4px;
-    z-index: 2;
-}
-
-.carrusel .prev { left: 10px; }
-.carrusel .next { right: 10px; }
