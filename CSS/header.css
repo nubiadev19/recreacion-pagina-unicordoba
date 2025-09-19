@@ -1,154 +1,150 @@
-/* pa que el header tenga los elementos en fila y bien alineados */
-header {
-    display: flex; /* pone el logo y el menu en una fila */
-    align-items: center; /* centrar verticalmente */
-    justify-content: space-between; /* logo a la izq, menu a la der */
-    padding: 10px 30px; /* espacio arriba y a los lados */
-    background: #fff; /* fondo blanco */
+/* body: quita el margen y pone tamaño base */
+body {
+    margin: 0; /* elimina el espacio por defecto alrededor de la página */
+    font-size: 16px; /* define el tamaño base del texto */
 }
 
-/* pa que el logo no sea gigante xd
-*/
-header img {
-    height: 90px; /* ajusta el tamaño segun te guste */
-    margin-right: 50px; /* separa el logo del menu */
-}
-
-/* pa que el menu institucional se vea bonito */
-header nav ul {
-    display: flex; /* pone los items en fila */
-    gap: 60px; /* espacio entre los items */
-    list-style: none; /* sin punticos */
-    margin: 0;
-    padding: 0;
-}
-
-header nav ul li a {
-    color: #222; /* color del texto */
-    font-weight: bold; /* negrita */
-    text-decoration: none; /* sin subrayado */
-    font-size: 18px; /* tamaño de letra */
-    transition: color 0.2s;
-    font-family: "Open Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-variation-settings:
-    "wdth" 100;
-}
-
-header nav ul li a:hover {
-    color: #418828; /* verde al pasar el mouse */
-}
-
-/* contenedor del menu y los iconos sociales, pa que todo quede en una sola fila */
+/* menu-bar: barra superior con links y redes sociales */
 .menu-bar {
-    display: flex; /* pa poner los hijos en fila */
-    justify-content: space-between; /* menu a la izq, iconos a la der */
-    align-items: center; /* centrar verticalmente */
-    background-color: white; /* fondo blanco */
-    border-top: 3px solid green; /* linea verde arriba */
-    border-bottom: 1px solid #ccc; /* linea gris abajo */
-    width: 100%; /* ocupa todo el ancho */
-    padding: 0 20px; /* un poquito de espacio a los lados */
-    box-sizing: border-box; /* pa que el padding no dañe el ancho */
+    display: flex; /* pone los hijos en una fila horizontal */
+    justify-content: space-between; /* separa los links a la izquierda y redes a la derecha */
+    align-items: center; /* centra verticalmente los elementos */
+    background: #fff; /* fondo blanco para la barra */
+    border-top: 4px solid rgb(88, 192, 53); /* línea verde arriba */
+    border-bottom: 1px solid #d3d3d3; /* línea gris abajo */
+    width: 100%; /* ocupa todo el ancho disponible */
+    padding: 0 20px; /* agrega espacio a los lados */
+    box-sizing: border-box; /* incluye el padding en el ancho total */
 }
 
-/* menu principal, pa que los items se repartan bonito */
+/* menu-bar ul: lista horizontal de links */
 .menu-bar ul {
-    display: flex; /* fila de items */
-    flex-wrap: wrap; /* si no caben, bajan */
-    margin: 0;
-    padding: 0;
-    list-style: none; /* sin punticos */
+    display: flex; /* pone los items en fila */
+    flex-wrap: wrap; /* si no caben, bajan a la siguiente línea */
+    margin: 0; /* quita el margen por defecto */
+    padding: 0; /* quita el padding por defecto */
+    list-style: none; /* elimina los punticos de la lista */
     flex: 1; /* ocupa todo el espacio posible */
-    justify-content: flex-start; /* alineado a la izq */
-    background: none;
-    border: none;
+    justify-content: flex-start; /* alinea los links a la izquierda */
 }
 
-/* cada cuadro del menu, pa que todos sean iguales */
+/* menu-bar li: cada cuadro del menú superior */
 .menu-bar li {
-    margin: 0;
-    flex: 1 1 120px; /* se adaptan, minimo 120px */
-    max-width: 180px; /* no se pasan de 180px */
-    min-width: 100px; /* no se achican mucho */
-    height: 60px; /* alto fijo */
-    display: flex; /* pa centrar el contenido */
-    align-items: center; /* centrar verticalmente */
-    justify-content: center; /* centrar horizontalmente */
-    border-right: 1px solid #ccc; /* linea entre cuadros */
-    border-bottom: 1px solid #eee; /* linea abajo */
-    box-sizing: border-box; /* pa que el borde no dañe el ancho */
+    margin: 0; /* sin espacio entre cuadros */
+    flex: 1 1 100px; /* los cuadros se adaptan, mínimo 100px */
+    max-width: 150px; /* no se pasan de 150px, así no se sale el texto */
+    min-width: 90px; /* no se achican mucho */
+    height: 42px; /* menos alto para que la letra no se salga */
+    display: flex; /* centra el contenido en el cuadro */
+    align-items: center; /* centra verticalmente */
+    justify-content: center; /* centra horizontalmente */
+    border-right: 1px solid #e0e0e0; /* línea gris entre cuadros */
+    box-sizing: border-box; /* incluye el borde en el ancho */
 }
 
-/* el ultimo cuadro no tiene linea a la derecha */
-.menu-bar li:last-child {
-    border-right: none;
-}
-
-/* enlaces del menu, pa que se vean bonitos */
+/* menu-bar a: estilos para los enlaces del menú superior */
 .menu-bar a {
     width: 100%; /* ocupa todo el cuadro */
-    height: 100%; /* ocupa todo el cuadro */
-    display: flex; /* pa centrar texto */
-    align-items: center; /* centrar verticalmente */
-    justify-content: center; /* centrar horizontalmente */
+    height: 100%; /* ocupa todo el cuadro verticalmente */
+    display: flex; /* centra el texto */
+    align-items: center; /* centra verticalmente */
+    justify-content: center; /* centra horizontalmente */
     text-decoration: none; /* sin subrayado */
-    color: #418828; /* verde bonito */
-    font-weight: bold; /* negrita */
-    background-color: #fff; /* fondo blanco */
-    font-size: 18px; /* tamaño de letra */
-    transition: background 0.2s, color 0.2s; /* animacion al pasar el mouse */
+    color: #219c29; /* verde para el texto */
+    background: #fff; /* fondo blanco */
+    font-size: 15px; /* tamaño de letra más pequeño para que no se salga */
+    transition: background 0.2s, color 0.2s; /* animación suave al pasar el mouse */
     border-radius: 0; /* sin bordes redondeados */
+    font-family: "Open Sans", Arial, sans-serif; /* */
+    padding: 0 3px; /* un poquito de espacio a los lados */
 }
 
-/* efecto al pasar el mouse, pa que se note */
+
+
+/* hover en los links del menú superior */
 .menu-bar a:hover {
-    background-color: #f0f0f0; /* fondo gris claro */
-    color: darkgreen; /* verde mas oscuro */
+    background: #eafbe6; /* fondo verde muy claro al pasar el mouse */
+    color: #0c4c0f; /* texto verde oscuro al pasar el mouse */
 }
 
-/* iconos sociales, pa que queden a la derecha y alineados */
+/* social-icons: fila de iconos de redes sociales */
 .social-icons {
-    display: flex; /* fila de iconos */
+    display: flex; /* pone los iconos en fila */
     gap: 10px; /* espacio entre iconos */
     margin-top: 0; /* sin margen arriba */
 }
 
-/* cada icono social, pa que se vea cuadradito */
+/* social-icons a: cada icono con fondo y tamaño */
 .social-icons a {
-    display: flex; /* pa centrar el icono */
-    align-items: center; /* centrar verticalmente */
-    justify-content: center; /* centrar horizontalmente */
-    width: 32px; /* tamaño del cuadro */
-    height: 32px;
+    display: flex; /* centra el icono */
+    align-items: center; /* centra verticalmente */
+    justify-content: center; /* centra horizontalmente */
+    width: 20px; /* ancho del cuadro del icono */
+    height: 20px; /* alto del cuadro del icono */
     background: #f5f5f5; /* fondo gris claro */
-    border-radius: 6px; /* bordes medio redondeados */
-    color: #418828; /* verde igual que el menu */
-    font-size: 18px; /* tamaño del icono */
-    transition: 0.3s; /* animacion al pasar el mouse */
+    border-radius: 6px; /* bordes redondeados */
+    color: 219c29; /* verde igual que los links */
+    font-size: 15px; /* tamaño del icono */
+   
 }
 
-/* efecto al pasar el mouse por los iconos sociales */
+/* hover en los iconos sociales */
 .social-icons a:hover {
-    background: green; /* fondo verde */
-    color: white; /* icono blanco */
+    background: #16831e; /* fondo verde al pasar el mouse */
+    color: #fff; /* icono blanco al pasar el mouse */
 }
 
-/* responsive pa pantallas pequeñas, pa que no se vea todo apretado */
-@media (max-width: 900px) {
-    .menu-bar li {
-        max-width: 100px; /* mas pequeño */
-        min-width: 70px;
-        height: 45px;
-    }
-    .menu-bar a {
-        font-size: 13px; /* letra mas pequeña */
-    }
-    .social-icons a {
-        width: 26px;
-        height: 26px;
-        font-size: 14px;
-    }
+/* logo-menu: logo y menú institucional en fila, centrado vertical */
+.logo-menu {
+    display: flex; /* pone el logo y el menú en una fila */
+    align-items: center; /* centra verticalmente */
+    justify-content: space-between; /* separa logo y menú */
+    width: 100%; /* ocupa todo el ancho */
+    margin-top: 15px; /* espacio arriba */
+    padding: 0 30px; /* espacio a los lados */
+    box-sizing: border-box; /* incluye el padding en el ancho */
+    font-weight: bold; /* negrita para el menú */
+}
+
+/* logo-img: tamaño y espacio del logo */
+.logo-menu img {
+    height: 90px; /* alto del logo */
+    margin-right: 40px; /* espacio entre logo y menú */
+}
+
+/* menu-institucional: menú principal centrado */
+.logo-menu nav {
+    flex: 1; /* ocupa el espacio disponible */
+    display: flex; /* pone el menú en fila */
+    justify-content: right; /* centra el menú */
+}
+
+/* menu-institucional ul: lista horizontal de links institucionales */
+.logo-menu nav ul {
+    display: flex; /* fila horizontal */
+    gap: 30px; /* espacio entre los items */
+    list-style: none; /* sin punticos */
+    margin: 0;
+    padding: 0;
+}
+
+/* menu-institucional a: estilos para los links institucionales */
+.logo-menu nav ul li a {
+    color: #111; /* texto oscuro */
+    font-weight: 700; /* negrita */
+    text-decoration: none; /* sin subrayado */
+    font-size: 17px; /* tamaño de letra */
+    transition: color 0.2s; /* animación suave */
+    font-family: "Open Sans", Arial, sans-serif; /* fuente moderna */
+    letter-spacing: 0.5px; /* espacio entre letras */
+}
+
+
+/* search-icon: lupa a la derecha */
+.search-icon {
+    font-size: 20px; /* tamaño de la lupa */
+    color: #111; /* color oscuro */
+    cursor: pointer; /* cambia el cursor a manito */
+    margin-left: 30px; /* espacio a la izquierda */
+    transition: color 0.2s; /* animación suave */
 }

@@ -18,8 +18,8 @@ body{
     padding: 0;
 }
 
-/* pa que las imagenes se ajusten al carrusel y se vean completas */
-.carrusel .slides img {
+/* pa que las imagenes se ajusten y se vean completas */
+.carrusel img {
     width: 100vw;
     height: 100%;
     object-fit: contain; /* muestra toda la imagen sin recortar */
