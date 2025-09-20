@@ -1,83 +1,81 @@
-/* bloque principal del footer */
-.footer {
-    position: relative; /* permite colocar la capa de fondo */
-    background: #fff; /* color blanco de base */
-    margin-top: 40px; /* espacio hacia arriba */
-    font-family: 'open sans', arial, sans-serif; /* tipografia */
-    color: #222; /* color de texto */
-    border-top: 1px solid #e0e0e0; /* linea gris superior */
-    overflow: hidden; /* oculta lo que sobresalga */
+/* ---------- footer general ---------- */
+footer {
+  width: 100vw; /* ocupa todo el ancho de la ventana */
+  background-image: url(../IMG/fondoFooter.png);
+  background-size: cover;
+  background-position: center;
+  padding: 30px 40px; /* espacio lateral para separar del borde */
+  font-family: arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  box-sizing: border-box; /* incluye el padding en el ancho */
 }
 
-/* capa de fondo con la imagen */
-.footer-bg {
-    position: absolute; /* detras del contenido */
-    top: 0; right: 0; bottom: 0; left: 0; /* cubre todo el footer */
-    background: url('../IMG/fondoFooter.png') no-repeat right center; /* ruta de la imagen */
-    background-size: 60% auto; /* tamaño relativo */
-    opacity: 0.12; /* transparencia */
-    z-index: 0; /* se queda debajo */
+/* ---------- bloque superior con secciones ---------- */
+.footer-top {
+  display: flex;                      /* usa flexbox para organizar secciones */
+  justify-content: space-between;     /* separa las secciones de forma uniforme */
+  flex-wrap: wrap;                    /* permite que las secciones bajen en pantallas pequeñas */
+  margin-bottom: 20px;                /* separacion con el bloque inferior */                      /* espacio horizontal entre las secciones */
+  gap: 10px; /* espacio pequeño entre secciones para que estén juntas */
 }
 
-/* contenedor de columnas */
-.footer-columns {
-    display: grid; /* activa grid */
-    grid-template-columns: repeat(6, 1fr); /* 6 columnas iguales */
-    gap: 30px; /* espacio entre columnas */
-    max-width: 1400px; /* limite maximo de ancho */
-    margin: 0 auto; /* centra el bloque */
-    padding: 40px 30px 20px 30px; /* espaciado interno */
-    position: relative; /* asegura que quede sobre la capa de fondo */
-    z-index: 1; /* sobre la imagen */
+/* ---------- cada seccion del bloque superior ---------- */
+.footer-section {
+  width: 160px;                       /* ancho fijo aproximado de cada seccion */
+  min-width: 120px;                   /* evita que se haga muy pequeña */
+  margin-bottom: 20px;                /* espacio inferior en pantallas pequeñas */
+  line-height: 1.8;                   /* espacio entre lineas */
+  text-align: left;                   /* texto alineado a la izquierda */
 }
 
-
-/* cada columna individual */
-.footer-columns > div {
-    font-size: 15px; /* tamaño de letra */
-    line-height: 1.6; /* interlineado */
-    color: #222; /* color de texto */
+/* ---------- titulos de cada seccion ---------- */
+.footer-section strong {
+  display: block;                     /* se muestra en su propia linea */
+  font-weight: bold;                  /* texto en negrita */
+  margin-bottom: 6px;                 /* espacio inferior con el resto del contenido */
+  color: #000;                        /* color negro fuerte */
+  text-transform: uppercase;          /* convierte los titulos a mayusculas */
 }
 
-/* titulos en negrita */
-.footer-columns strong {
-    font-weight: bold; /* negrita */
-    color: #222; /* mismo color */
+/* ---------- parrafos de cada seccion ---------- */
+.footer-section p {
+  margin: 0;                          /* elimina margen por defecto */
+  color: #222;                        /* color gris oscuro para contraste */
 }
 
-/* bloque de informacion institucional */
-.footer-info {
-    text-align: center; /* centrado */
-    font-size: 14px; /* tamaño texto */
-    color: #444; /* gris oscuro */
-    margin: 10px 0 0 0; /* margen arriba */
-    position: relative; /* mantiene el nivel */
-    z-index: 1; /* sobre la imagen */
+/* ---------- bloque inferior ---------- */
+.footer-bottom {
+  text-align: center;                 /* centra el texto del bloque inferior */
+  width: 100vw; /* ocupa todo el ancho de la ventana */ /* ancho maximo para que no se extienda demasiado */
+  margin: 0;                     /* centra el bloque inferior */
+  font-size: 12px;                    /* tamaño mas pequeño para esta info */
+  color: #444;                        /* color gris medio */
+  line-height: 1.6;                   /* espacio entre lineas */
+  padding: 0 15px;                    /* espaciado lateral interno */
+  border-top: 1px solid #222; /* línea más delgada y de ancho completo */
+  box-sizing: border-box;
 }
 
-/* bloque de informacion legal */
+/* ---------- cada parte del bloque inferior ---------- */
+.footer-info,
 .footer-legal {
-    text-align: center; /* centrado */
-    font-size: 13px; /* texto mas pequeño */
-    color: #444; /* gris oscuro */
-    margin: 8px 0 0 0; /* margen arriba */
-    position: relative; /* mantiene el flujo */
-    z-index: 1; /* sobre la imagen */
+  margin-bottom: 10px;                /* espacio entre cada bloque */
 }
 
-/* version responsive */
+/* ---------- responsive ---------- */
 @media (max-width: 900px) {
-    .footer-columns {
-        grid-template-columns: 1fr; /* cambia a una columna */
-        gap: 10px; /* espacio reducido */
-        padding: 20px 10px 10px 10px; /* menos padding */
-    }
-    .footer-columns > div {
-        font-size: 14px; /* reduce fuente */
-    }
-    .footer-info,
-    .footer-legal {
-        font-size: 12px; /* texto mas pequeño */
-        padding: 0 5px; /* espacio lateral */
-    }
+  .footer-section {
+    width: 45%;                       /* en pantallas medianas, se muestran dos columnas */
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-section {
+    width: 100%;                      /* en pantallas pequeñas, se muestra en una sola columna */
+  }
+}
+
+body {
+  overflow-x: hidden;
 }

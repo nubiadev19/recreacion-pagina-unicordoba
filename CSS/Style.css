@@ -2,19 +2,19 @@
 body{
     margin: 0;
     font-size: 16px; /* tamaño base pa todo el texto */
+    background-color: #fff; /* fondo blanco */
 }
 
 .carrusel {
-    width: 100vw;
-    height: 550px; /* más alto */
+    width: 100vw; /* ocupa todo el ancho de la ventana */
+    height: 650px; /* pon el alto que quieras */
     position: relative;
     overflow: hidden;
-    background: #fff;
-    margin-top: 15px;
+    margin-top: 20px;
 }
 
 .carrusel img {
-    width: 100vw;
+    width: 100vw; /* ocupa todo el ancho de la ventana */
     height: 100%;
     object-fit: cover;
     display: block;
