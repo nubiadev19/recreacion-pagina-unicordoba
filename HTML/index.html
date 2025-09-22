@@ -94,77 +94,211 @@
         <img src="../IMG/noticia3.jpg" alt="Noticia 3">
     </div>
 </div>
- 
+
+<div class="historial">
+  <div class="historial-titulos">
+    <h3>Historial de Noticias</h3>
+    <h3>Videos Institucionales</h3>
+  </div>
+</div>
+
+<!-- Contenedor principal que agrupa todas las tarjetas despues de las noticias -->
+    <section class="eventos">
+        
+        <!-- Cada evento va dentro de un div con clase tarjeta -->
+        <div class="tarjeta">
+            <img src="../IMG/evento.jpeg" alt="Congreso de Ingenieria">
+        </div>
+        
+        <div class="tarjeta">
+            <img src="../IMG/Imagen-Conasie.jpeg" alt="Congreso CONASIE">
+        </div>
+        
+        <div class="tarjeta">
+            <img src="../IMG/semillero.png" alt="semillero">
+        </div>
+        
+        <div class="tarjeta">
+            <img src="../IMG/enfermeria.jpeg" alt="enfermeria">
+        </div>
+
+    </section>
+
+
+<!-- seccion de franja de la emisora -->
+<section class="franja-stereo">
+  <!-- imagen del banner de la emisora -->
+  <img src="../IMG/Franja-unicordoba.png" alt="franja stereo" class="franja-img">
+
+  <!-- contenedor del reproductor -->
+  <div class="audio-player">
+    <!-- reproductor incrustado -->
+    <iframe 
+      src="https://cp.usastreams.com/pr2g/applayerradiohtml5.aspx?stream=http://unicordobaestereo.unicordoba.edu.co:80/unicor&fondo=03&formato=mpeg&color=11&titulo=4&autostart=1&vol=5&tipo=13&nombre=senal+en+vivo&botonplay=2&"
+      frameborder="0" 
+      scrolling="no" 
+      allow="autoplay"
+      class="player-frame">
+    </iframe>
+  </div>
+</section>
+
+
+<!-- SECCION DE NUESTRO CANAL -->
+<section class="canal">
+  <h2>Nuestro Canal</h2>
+
+  <div class="contenedor-canal">
+    <div class="item">
+      <img src="../IMG/asi-nos-ven.png" alt="Así nos ven">
+    </div>
+
+    <div class="item">
+      <img src="../IMG/En-la-U-ventana-inf.png" alt="En la U">
+    </div>
+
+    <div class="item">
+      <img src="../IMG/EL-FARO.png" alt="El Faro">
+    </div>
+
+    <div class="item video">
+      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/7OufwG0H850?si=LxNMY59aIbb0XjIS&amp;start=2" 
+        title="YouTube video player" frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+
+ <div class="historial">
+  <div class="historial-titulos">
+    <h3>Historial de Noticias</h3>
+    <h3>Eventos Anteriores</h3>
+  </div>
+</div>
+</section>
+
+<!-- seccion unicordoba stereo -->
+<section class="franja-stereo">
+  <!-- imagen del banner de la emisora -->
+  <img src="../IMG/Slide-Sintonizala.png" alt="franja stereo unicordoba" class="franja-img">
+
+  <!-- contenedor del reproductor -->
+  <div class="audio-player">
+    <!-- reproductor incrustado  -->
+    <iframe 
+      src="https://cp.usastreams.com/html5-player-barra-responsive.aspx?stream=http://unicordobaestereo.unicordoba.edu.co:80/unicor&fondo=09&formato=mpeg&color=2&titulo=4&autoStart=20&vol=5&nombre=En+vivo&botonPlay=2&imagen=https://www.unicordoba.edu.co/wp-content/uploads/2021/08/logoUnicordobastereo.png"
+      frameborder="0" 
+      scrolling="no" 
+      allow="autoplay"
+      class="player-frame">
+    </iframe>
+  </div>
+
+  <div class="historial">
+  <div class="historial-titulos">
+    <h3>Historial de Noticias</h3>
+    <h3>Eventos Anteriores</h3>
+  </div>
+</div>
+</section>
+
+<!-- seccion antes de footer -->
+<section class="institucional">
+  <div class="logos">
+    <img src="../IMG/govco-1.png" alt="gov co">
+    <img src="../IMG/colombiaco-2.png" alt="colombia co">
+    <img src="../IMG/acreditada-1.png" alt="acreditada">
+    <img src="../IMG/trnasparencia-4.png" alt="transparencia">
+    <img src="../IMG/simbolos-2.png" alt="simbolos">
+    <img src="../IMG/imagen-pei-sris.fw_-1 (1).png" alt="pei">
+    <img src="../IMG/certificaciones-1.png" alt="">
+  </div>
+</section>
+
+<!-- seccion de redes sociales -->
+<section class="social">
+  <p>Encuéntranos</p>
+  <div class="icons">
+    <i class="fab fa-facebook-f"></i>
+    <i class="fab fa-twitter"></i>
+    <i class="fab fa-youtube"></i>
+    <i class="fab fa-instagram"></i>
+    <i class="fab fa-whatsapp"></i>
+    <i class="fas fa-envelope"></i>
+  </div>
+</section>
+
+
+
 <!-- inicio del footer -->
 <footer>
 
-  <!-- bloque superior con secciones de informacion -->
+  <!-- bloque superior con columnas -->
   <div class="footer-top">
     
-    <!-- cada section representa un bloque de contenido -->
+    <!-- cada bloque es una columna de enlaces -->
     <section class="footer-section">
-      <strong>pregrado</strong>
-      <p>postgrado</p>
-      <p>campus virtual - repositorio</p>
-      <p>tableau - nuestras cifras</p>
-      <p>bienestar universitario</p>
-      <p>atencion al ciudadano</p>
+      <p>Pregrado  Postgrado</p>
+      <p>Campus Virtual-Repositorio</p>
+      <p>Tableau-Nuestras Cifras</p>
+      <p>Bienestar Universitario</p>
+      <p>Atención al Ciudadano</p>
     </section>
 
     <section class="footer-section">
-      <strong>mesa de ayuda</strong>
-      <p>orfeo</p>
-      <p>sigec - documentos</p>
-      <p>pqrsyd - indicadores</p>
-      <p>transparencia y acceso a la informacion</p>
+      <p>Mesa de ayuda ORFEO</p>
+      <p>Sigec - Documentos</p>
+      <p>PQRSYD - Indicadores</p>
+      <p>Transparencia y acceso a la información</p>
     </section>
 
     <section class="footer-section">
-      <strong>comunicaciones</strong>
-      <p>dependencias</p>
-      <p>glosario - bibliotecas</p>
-      <p>revistas - opca - iibt</p>
-      <p>gestion documental</p>
-      <p>boletines - laboratorios</p>
-      <p>imprenta nacional</p>
+      <p>Comunicaciones</p>
+      <p>Dependencias</p>
+      <p>Glosario - Bibliotecas</p>
+      <p>Revistas - OPCA - IIBT</p>
+      <p>Gestion Documental</p>
+      <p>Boletines - Laboratorios</p>
+      <p>Imprenta Nacional</p>
     </section>
 
     <section class="footer-section">
-      <strong>contratacion</strong>
-      <p>mecanismos de control</p>
-      <p>planeacion - servicios tic</p>
-      <p>informacion financiera</p>
-      <p>internacionalizacion</p>
+      <p>Contratación</p>
+      <p>Mecanismos de control</p>
+      <p>Planeación - Servicios TIC</p>
+      <p>Información Financiera</p>
+      <p>Internacionalización </p>
     </section>
 
     <section class="footer-section">
-      <strong>equidad social</strong>
-      <p>derechos pecuniarios</p>
-      <p>rendicion de cuentas</p>
-      <p>cordoba transformada</p>
-      <p>todos seguros y saludables</p>
-      <p>ambiente universitario</p>
+      <p>Equidad Social</p>
+      <p>Derechos Pecuniarios</p>
+      <p>Rendición de Cuentas</p>
+      <p>Córdoba Transformada</p>
+      <p>Todos Seguros y Saludables</p>
+      <p>Ambiente Universitario</p>
     </section>
 
     <section class="footer-section">
-      <strong>convocatorias</strong>
-      <p>tramites</p>
-      <p>notificaciones judiciales</p>
-      <p>unidad de salud</p>
-      <p>todo sobre covid-19</p>
-      <p>suin - ekogui</p>
+      <p>Convocatorias</p>
+      <p>Trámites</p>
+      <p>Notificaciones Judiciales</p>
+      <p>Unidad de Salud</p>
+      <p>Todo sobre COVID-19</p>
+      <p>SUIN - Ekogui</p>
     </section>
 
   </div>
   <!-- fin bloque superior -->
 
-  <!-- bloque inferior con informacion institucional y legal -->
+  <!-- bloque inferior con informacion legal -->
   <div class="footer-bottom">
     <div class="footer-info">
-      carrera 6 no. 77-305 monteria - cordoba, colombia | codigo postal: 230002 pbx: 57-6047862396 | nit: 891080031-3 | contacto@correo.unicordoba.edu.co - linea anticorrupcion: +57 604-7862396 extension 1030
+      Carrera 6 no. 77-305 Monteria - Córdoba, Colombia | Codigo Postal: 230002 PBX: 57-6047862396 | NIT: 891080031-3 | contacto@correo.unicordoba.edu.co - Linea Anticorrupcion: +57 604-7862396 extension 1030
     </div>
     <div class="footer-legal">
-      la universidad de cordoba es una institucion de educacion superior sujeta a inspeccion y vigilancia por el ministerio de educacion nacional. politica de tratamiento de datos, politica de privacidad, transparencia y acceso a la informacion, pqrsyd contacto@correo.unicordoba.edu.co - notificacionesjudiciales@correo.unicordoba.edu.co
+      La Universidad de Córdoba es una institucion de educacion superior sujeta a inspeccion y vigilancia por el ministerio de educacion nacional. Politica de tratamiento de datos, politica de privacidad, transparencia y acceso a la informacion, pqrsyd contacto@correo.unicordoba.edu.co - notificacionesjudiciales@correo.unicordoba.edu.co
     </div>
   </div>
   <!-- fin bloque inferior -->

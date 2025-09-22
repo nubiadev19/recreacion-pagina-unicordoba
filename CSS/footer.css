@@ -1,81 +1,58 @@
 /* ---------- footer general ---------- */
 footer {
   width: 100vw; /* ocupa todo el ancho de la ventana */
-  background-image: url(../IMG/fondoFooter.png);
-  background-size: cover;
-  background-position: center;
-  padding: 30px 40px; /* espacio lateral para separar del borde */
-  font-family: arial, sans-serif;
-  font-size: 14px;
-  color: #000;
-  box-sizing: border-box; /* incluye el padding en el ancho */
+  background-image: url(../IMG/fondoFooter.png); /* fondo con imagen institucional */
+  background-size: cover; /* la imagen cubre todo el ancho */
+  background-position: center; /* centrado del fondo */
+  padding: 30px 40px; /* espacio interno superior e inferior */
+  font-family: arial, sans-serif; /* tipografia general */
+  font-size: 14px; /* tamano del texto */
+  color: #000; /* color de texto negro */
+  box-sizing: border-box; /* incluye el padding dentro del ancho total */
 }
 
 /* ---------- bloque superior con secciones ---------- */
 .footer-top {
-  display: flex;                      /* usa flexbox para organizar secciones */
-  justify-content: space-between;     /* separa las secciones de forma uniforme */
-  flex-wrap: wrap;                    /* permite que las secciones bajen en pantallas pequeñas */
-  margin-bottom: 20px;                /* separacion con el bloque inferior */                      /* espacio horizontal entre las secciones */
-  gap: 10px; /* espacio pequeño entre secciones para que estén juntas */
+  display: flex; /* activa flexbox para organizar en fila */
+  justify-content: space-between; /* separa las columnas con espacio entre ellas */
+  flex-wrap: wrap; /* si no caben en una linea, bajan */
+  margin-bottom: 20px; /* separacion con el bloque inferior */
+  gap: 10px; /* espacio entre columnas */
 }
 
-/* ---------- cada seccion del bloque superior ---------- */
+/* ---------- cada seccion de informacion ---------- */
 .footer-section {
-  width: 160px;                       /* ancho fijo aproximado de cada seccion */
-  min-width: 120px;                   /* evita que se haga muy pequeña */
-  margin-bottom: 20px;                /* espacio inferior en pantallas pequeñas */
-  line-height: 1.8;                   /* espacio entre lineas */
-  text-align: left;                   /* texto alineado a la izquierda */
+  width: 180px; /* ancho fijo aproximado de cada columna */
+  min-width: 120px; /* evita que se hagan demasiado pequenas */
+  margin-bottom: 20px; /* espacio inferior en pantallas pequenas */
+  line-height: 1.3; /* espacio entre lineas */
+  text-align: left; /* texto alineado a la izquierda */
 }
 
 /* ---------- titulos de cada seccion ---------- */
 .footer-section strong {
-  display: block;                     /* se muestra en su propia linea */
-  font-weight: bold;                  /* texto en negrita */
-  margin-bottom: 6px;                 /* espacio inferior con el resto del contenido */
-  color: #000;                        /* color negro fuerte */
-  text-transform: uppercase;          /* convierte los titulos a mayusculas */
+  display: block; /* se pone en su propia linea */
+  font-weight: bold; /* texto en negrita */
+  margin-bottom: 6px; /* espacio inferior */
+  color: #000; /* color negro fuerte */
+
 }
 
 /* ---------- parrafos de cada seccion ---------- */
 .footer-section p {
-  margin: 0;                          /* elimina margen por defecto */
-  color: #222;                        /* color gris oscuro para contraste */
+  margin: 0; /* elimina margen por defecto */
+  color: #222; /* gris oscuro para buen contraste */
 }
 
 /* ---------- bloque inferior ---------- */
 .footer-bottom {
-  text-align: center;                 /* centra el texto del bloque inferior */
-  width: 100vw; /* ocupa todo el ancho de la ventana */ /* ancho maximo para que no se extienda demasiado */
-  margin: 0;                     /* centra el bloque inferior */
-  font-size: 12px;                    /* tamaño mas pequeño para esta info */
-  color: #444;                        /* color gris medio */
-  line-height: 1.6;                   /* espacio entre lineas */
-  padding: 0 15px;                    /* espaciado lateral interno */
-  border-top: 1px solid #222; /* línea más delgada y de ancho completo */
-  box-sizing: border-box;
-}
-
-/* ---------- cada parte del bloque inferior ---------- */
-.footer-info,
-.footer-legal {
-  margin-bottom: 10px;                /* espacio entre cada bloque */
-}
-
-/* ---------- responsive ---------- */
-@media (max-width: 900px) {
-  .footer-section {
-    width: 45%;                       /* en pantallas medianas, se muestran dos columnas */
-  }
-}
-
-@media (max-width: 600px) {
-  .footer-section {
-    width: 100%;                      /* en pantallas pequeñas, se muestra en una sola columna */
-  }
-}
-
-body {
-  overflow-x: hidden;
+  text-align: center; /* centra el texto */
+  width: 100%; /* ocupa todo el ancho */
+  margin: 0; /* elimina margenes */
+  font-size: 12px; /* texto mas pequeno */
+  color: #444; /* gris medio */
+  line-height: 1.6; /* espacio entre lineas */
+  padding: 10px 15px; /* espacio interno */
+  border-top: 1px solid #222; /* linea superior divisoria */
+  box-sizing: border-box; /* incluye padding dentro del ancho */
 }
